@@ -66,6 +66,10 @@ class TestRLike(unittest.TestCase):
         except Exception as e:
             self.fail(f"Plot function raised an exception {e}")
 
+    def test_one_in(self):
+        self.assertEqual(r_like.one_in(47/85), "approximately 1 in 2")
+        self.assertEqual(r_like.one_in(33/16660), "approximately 1 in 505")
+        self.assertEqual(r_like.one_in(1/3), "approximately 1 in 3")
 
 if __name__ == '__main__':
     unittest.main()

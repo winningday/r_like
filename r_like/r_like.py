@@ -204,3 +204,20 @@ def plot(x, y, kind='line', title=None, xlabel=None, ylabel=None):
         plt.ylabel(ylabel)
     
     plt.show()
+
+def one_in(fraction):
+    """
+    Gives an approximate "one in y" chance. Useful for calculating
+    probability approximations
+
+    Args:
+        n (int): The number to calculate the factorial of.
+
+    Returns:
+        int: The factorial of the number.
+    """
+    frac = fractions(fraction)
+    num = frac.numerator
+    den = frac.denominator
+    y = round(den / num)
+    return f"approximately 1 in {y}"

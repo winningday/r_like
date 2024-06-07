@@ -13,10 +13,12 @@ pip install .
 
 ## Usage
 
+You can import the functions in two ways:
+
 ## Method 1: Import Individual Functions
 
 ```python
-from r_like import choose, seq, mean, median, sd, var, sum_values, prod, summary, fractions, factorial, plot
+from r_like import choose, seq, mean, median, sd, var, sum_values, prod, summary, fractions, factorial, plot, one_in
 
 # Example usage
 print(choose(52, 5))  # Should output 2598960
@@ -55,6 +57,10 @@ print(factorial(5))  # Should output 120
 x = seq(1, 10)
 y = [i**2 for i in x]
 plot(x, y, kind='line', title='Example Plot', xlabel='X-axis', ylabel='Y-axis')
+
+# Using the one_in function
+print(one_in(47/85))  # Should output "approximately 1 in 2"
+print(one_in(33/16660))  # Should output "approximately 1 in 505"
 
 ```
 
@@ -99,6 +105,11 @@ print(rl.factorial(5))  # Should output 120
 x = rl.seq(1, 10)
 y = [i**2 for i in x]
 rl.plot(x, y, kind='line', title='Example Plot', xlabel='X-axis', ylabel='Y-axis')
+
+# Using the one_in function
+print(rl.one_in(47/85))  # Should output "approximately 1 in 2"
+print(rl.one_in(33/16660))  # Should output "approximately 1 in 505"
+
 ```
 
 
