@@ -18,7 +18,10 @@ You can import the functions in two ways:
 ## Method 1: Import Individual Functions
 
 ```python
-from r_like import choose, seq, mean, median, sd, var, sum_values, prod, summary, fractions, factorial, plot, one_in
+from r_like import (
+    choose, seq, mean, median, sd, var, sum_values, prod, 
+    summary, fractions, factorial, plot, one_in
+)
 
 # Example usage
 print(choose(52, 5))  # Should output 2598960

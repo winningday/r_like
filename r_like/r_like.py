@@ -21,6 +21,7 @@ def choose(n, k, formatted=False):
         return f"{result:,}"
     return result
 
+
 def seq(start, stop, step=1):
     """
     Generate a sequence of numbers.
@@ -35,6 +36,7 @@ def seq(start, stop, step=1):
     """
     return list(range(start, stop + 1, step))
 
+
 def mean(values):
     """
     Calculate the mean of a list of numbers.
@@ -46,6 +48,7 @@ def mean(values):
         float: The mean of the list of numbers.
     """
     return sum(values) / len(values)
+
 
 def median(values):
     """
@@ -65,6 +68,7 @@ def median(values):
     else:
         return sorted_values[mid]
 
+
 def sd(values):
     """
     Calculate the standard deviation of a list of numbers.
@@ -77,6 +81,7 @@ def sd(values):
     """
     mean_val = mean(values)
     return math.sqrt(sum((x - mean_val) ** 2 for x in values) / (len(values) - 1))
+
 
 def var(values):
     """
@@ -91,6 +96,7 @@ def var(values):
     mean_val = mean(values)
     return sum((x - mean_val) ** 2 for x in values) / (len(values) - 1)
 
+
 def sum_values(values):
     """
     Calculate the sum of a list of numbers.
@@ -102,6 +108,7 @@ def sum_values(values):
         float: The sum of the list of numbers.
     """
     return sum(values)
+
 
 def prod(values):
     """
@@ -118,6 +125,7 @@ def prod(values):
         result *= value
     return result
 
+
 def summary(values):
     """
     Provide summary statistics for a list of numbers.
@@ -129,16 +137,17 @@ def summary(values):
         dict: Summary statistics including min, max, mean, median, sd, var, sum, and count.
     """
     return {
-        'min': min(values),
-        'max': max(values),
-        'mean': mean(values),
-        'median': median(values),
-        'sd': sd(values),
-        'var': var(values),
-        'sum': sum_values(values),
-        'prod': prod(values),
-        'count': len(values)
+        "min": min(values),
+        "max": max(values),
+        "mean": mean(values),
+        "median": median(values),
+        "sd": sd(values),
+        "var": var(values),
+        "sum": sum_values(values),
+        "prod": prod(values),
+        "count": len(values),
     }
+
 
 def fractions(value):
     """
@@ -151,6 +160,7 @@ def fractions(value):
         Fraction: The fraction representation of the float.
     """
     return Fraction(value).limit_denominator()
+
 
 def factorial(n):
     """
@@ -171,7 +181,8 @@ def factorial(n):
         result *= i
     return result
 
-def plot(x, y, kind='line', title=None, xlabel=None, ylabel=None):
+
+def plot(x, y, kind="line", title=None, xlabel=None, ylabel=None):
     """
     Plot data similar to R's plot() function.
 
@@ -187,23 +198,24 @@ def plot(x, y, kind='line', title=None, xlabel=None, ylabel=None):
         None
     """
     plt.figure()
-    if kind == 'line':
+    if kind == "line":
         plt.plot(x, y)
-    elif kind == 'scatter':
+    elif kind == "scatter":
         plt.scatter(x, y)
-    elif kind == 'bar':
+    elif kind == "bar":
         plt.bar(x, y)
     else:
         raise ValueError(f"Plot kind '{kind}' is not supported")
-    
+
     if title:
         plt.title(title)
     if xlabel:
         plt.xlabel(xlabel)
     if ylabel:
         plt.ylabel(ylabel)
-    
+
     plt.show()
+
 
 def one_in(fraction):
     """
