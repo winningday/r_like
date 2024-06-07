@@ -18,6 +18,6 @@ setup(
     python_requires='>=3.6',
     install_requires=[
         # No package dependencies yet.
-        # might add: 'numpy', 'pandas', etc.
+        # might add, 'numpy', 'pandas', etc.
     ],
 )
