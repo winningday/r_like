@@ -14,22 +14,22 @@ pip install .
 ## Usage
 
 ```python
-from r_like import r_like
+from r_like import choose, seq, mean, median, sd, var, sum_values, prod, summary, fractions, factorial, plot
 
 # Example usage
-print(r_like.choose(52, 5))  # Should output 2598960
+print(choose(52, 5))  # Should output 2598960
 
 # Using the seq function
-print(r_like.seq(1, 10))  # Should output [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(seq(1, 10))  # Should output [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # Calculating mean
-print(r_like.mean([1, 2, 3, 4, 5]))  # Should output 3.0
+print(mean([1, 2, 3, 4, 5]))  # Should output 3.0
 
 # Calculating standard deviation
-print(r_like.sd([1, 2, 3, 4, 5]))  # Should output 1.5811388300841898
+print(sd([1, 2, 3, 4, 5]))  # Should output 1.5811388300841898
 
 # Getting summary statistics
-print(r_like.summary([1, 2, 3, 4, 5]))
+print(summary([1, 2, 3, 4, 5]))
 # Should output:
 # {
 #     'min': 1,
@@ -44,7 +44,16 @@ print(r_like.summary([1, 2, 3, 4, 5]))
 # }
 
 # Converting a float to fraction
-print(r_like.fractions(0.5))  # Should output Fraction(1, 2)
+print(fractions(0.5))  # Should output Fraction(1, 2)
+
+# Calculating factorial
+print(factorial(5))  # Should output 120
+
+# Plotting example
+x = seq(1, 10)
+y = [i**2 for i in x]
+plot(x, y, kind='line', title='Example Plot', xlabel='X-axis', ylabel='Y-axis')
+
 ```
 
 ## Running Tests
