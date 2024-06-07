@@ -7,9 +7,9 @@ setup(
     description='A Python library mimicking some of R\'s functionality.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    author='Your Name',
-    author_email='your.email@example.com',
-    url='https://github.com/YOUR_GITHUB_USERNAME/r_like',
+    author='Marc Goodman',
+    author_email='wushumaro@gmail.com',
+    url='https://github.com/winningday/r_like',
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
@@ -18,6 +18,6 @@ setup(
     python_requires='>=3.6',
     install_requires=[
         'matplotlib',  # Required for plotting functionality
-gi        # might add, 'numpy', 'pandas', etc.
+        # might add, 'numpy', 'pandas', etc.
     ],
 )
