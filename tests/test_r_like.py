@@ -1,13 +1,14 @@
 # test_r_like.py
 import unittest
 from fractions import Fraction  # Add this import
-import r_like
+from r_like import r_like
 
 class TestRLike(unittest.TestCase):
     def test_choose(self):
         self.assertEqual(r_like.choose(52, 5), 2598960)
         self.assertEqual(r_like.choose(13, 4), 715)
         self.assertEqual(r_like.choose(13, 4, formatted=True), '715')
+        self.assertEqual(r_like.choose(52,5, formatted="True"), '2,598,960')
 
     def test_seq(self):
         self.assertEqual(r_like.seq(1, 10), list(range(1, 11)))
