@@ -48,6 +48,15 @@ class TestRLike(unittest.TestCase):
     def test_fractions(self):
         self.assertEqual(r_like.fractions(0.5), Fraction(1, 2))
         self.assertEqual(r_like.fractions(2/3), Fraction(2, 3))
+    
+
+    def test_factorial(self):
+        self.assertEqual(r_like.factorial(0), 1)
+        self.assertEqual(r_like.factorial(1), 1)
+        self.assertEqual(r_like.factorial(5), 120)
+        self.assertEqual(r_like.factorial(8), 40320)
+        with self.assertRaises(ValueError):
+            r_like.factorial(-1)
 
 if __name__ == '__main__':
     unittest.main()

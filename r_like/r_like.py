@@ -149,3 +149,22 @@ def fractions(value):
         Fraction: The fraction representation of the float.
     """
     return Fraction(value).limit_denominator()
+
+def factorial(n):
+    """
+    Calculate the factorial of a number.
+
+    Args:
+        n (int): The number to calculate the factorial of.
+
+    Returns:
+        int: The factorial of the number.
+    """
+    if n < 0:
+        raise ValueError("Factorial is not defined for negative numbers")
+    if n == 0 or n == 1:
+        return 1
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
