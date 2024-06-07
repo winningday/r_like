@@ -58,5 +58,14 @@ class TestRLike(unittest.TestCase):
         with self.assertRaises(ValueError):
             r_like.factorial(-1)
 
+    def test_plot(self):
+        try:
+            r_like.plot([1, 2, 3, 4, 5], [2, 4, 6, 8, 10], kind='line')
+            r_like.plot([1, 2, 3, 4, 5], [2, 4, 6, 8, 10], kind='scatter')
+            r_like.plot([1, 2, 3, 4, 5], [2, 4, 6, 8, 10], kind='bar')
+        except Exception as e:
+            self.fail(f"Plot function raised an exception {e}")
+
+
 if __name__ == '__main__':
     unittest.main()

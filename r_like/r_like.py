@@ -1,6 +1,8 @@
 # r_like.py
 import math
 from fractions import Fraction
+import matplotlib.pyplot as plt
+
 
 def choose(n, k, formatted=False):
     """
@@ -168,3 +170,37 @@ def factorial(n):
     for i in range(2, n + 1):
         result *= i
     return result
+
+def plot(x, y, kind='line', title=None, xlabel=None, ylabel=None):
+    """
+    Plot data similar to R's plot() function.
+
+    Args:
+        x (list): X-axis data.
+        y (list): Y-axis data.
+        kind (str): Type of plot ('line', 'scatter', 'bar').
+        title (str): Title of the plot.
+        xlabel (str): Label for the X-axis.
+        ylabel (str): Label for the Y-axis.
+
+    Returns:
+        None
+    """
+    plt.figure()
+    if kind == 'line':
+        plt.plot(x, y)
+    elif kind == 'scatter':
+        plt.scatter(x, y)
+    elif kind == 'bar':
+        plt.bar(x, y)
+    else:
+        raise ValueError(f"Plot kind '{kind}' is not supported")
+    
+    if title:
+        plt.title(title)
+    if xlabel:
+        plt.xlabel(xlabel)
+    if ylabel:
+        plt.ylabel(ylabel)
+    
+    plt.show()

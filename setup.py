@@ -17,7 +17,7 @@ setup(
     ],
     python_requires='>=3.6',
     install_requires=[
-        # No package dependencies yet.
-        # might add, 'numpy', 'pandas', etc.
+        'matplotlib',  # Required for plotting functionality
+gi        # might add, 'numpy', 'pandas', etc.
     ],
 )
