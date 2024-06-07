@@ -1,4 +1,3 @@
-```python
 from setuptools import setup, find_packages
 
 setup(
@@ -17,4 +16,8 @@ setup(
         'Operating System :: OS Independent',
     ],
     python_requires='>=3.6',
+    install_requires=[
+        # No package dependencies yet.
+        # might add: 'numpy', 'pandas', etc.
+    ],
 )
