@@ -99,7 +99,7 @@ print(rl.factorial(5))  # Should output 120
 x = rl.seq(1, 10)
 y = [i**2 for i in x]
 rl.plot(x, y, kind='line', title='Example Plot', xlabel='X-axis', ylabel='Y-axis')
-'''
+```
 
 
 ## Running Tests
