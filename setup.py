@@ -18,6 +18,6 @@ setup(
     python_requires=">=3.6",
     install_requires=[
         "matplotlib",  # Required for plotting functionality
-        # might add, 'numpy', 'pandas', etc.
+        # might add, 'numpy', 'pandas', scikit-learn and others.
     ],
 )
