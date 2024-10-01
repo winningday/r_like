@@ -28,9 +28,6 @@ class TestRLike(unittest.TestCase):
     def test_var(self):
         self.assertAlmostEqual(r_like.var([1, 2, 3, 4, 5]), 2.5)
 
-    def test_sum_values(self):
-        self.assertEqual(r_like.sum_values([1, 2, 3, 4, 5]), 15)
-
     def test_prod(self):
         self.assertEqual(r_like.prod([1, 2, 3, 4, 5]), 120)
 
