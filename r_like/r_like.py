@@ -97,19 +97,6 @@ def var(values):
     return sum((x - mean_val) ** 2 for x in values) / (len(values) - 1)
 
 
-def sum_values(values):
-    """
-    Calculate the sum of a list of numbers.
-
-    Args:
-        values (list): List of numbers.
-
-    Returns:
-        float: The sum of the list of numbers.
-    """
-    return sum(values)
-
-
 def prod(values):
     """
     Calculate the product of a list of numbers.
@@ -143,7 +130,7 @@ def summary(values):
         "median": median(values),
         "sd": sd(values),
         "var": var(values),
-        "sum": sum_values(values),
+        "sum": sum(values),
         "prod": prod(values),
         "count": len(values),
     }
